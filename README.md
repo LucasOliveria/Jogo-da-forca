@@ -31,9 +31,6 @@
     A cada palpite errado o programa imprime na tela uma parte do corpo do boneco, sendo 6, o número de palpites errados que o jogador pode jogar. O usuário vence se acertar todas as letras que compõem a palavra ou perde caso todas as 6 partes do boneco sejam impressas na tela antes dele conseguir advinhar a palavra.
 </p>
 
-<video src="./jogo-da-forca.js - Jogo-da-forca - Visual Studio Code 2023-01-08 10-22-19.mp4" width="900px"
-    controls></video>
-
 <h2 style="font-family: sans-serif;">Tecnologias utilizadas</h2>
 
 <ul>
