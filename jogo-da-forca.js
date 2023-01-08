@@ -1,70 +1,71 @@
 // Fazendo Jogo da Forca
-const palavra = "abelha"
+const word = "abelha"
 
-const forca = {
-    palavra,
-    tracos: "".padStart(palavra.length, "_").split(""),
-    guardaMembros: [],
-    membros: ["🧑", "💪", "💪", "❤️", "🦵", "🦵"],
-    verificarPalpite: function (palpite) {
-        let achouLetra = false;
+const hangman = {
+    word,
+    dashes: "".padStart(word.length, "_").split(""),
+    lostParts: [],
+    parts: ["🧑", "💪", "💪", "❤️", "🦵", "🦵"],
+    checkGuess: function (palpite) {
+        let foundLetter = false;
 
-        for (let i = 0; i < this.palavra.length; i++) {
-            if (palpite === this.palavra[i]) {
-                this.tracos.splice(i, 1, palpite);
-                achouLetra = true;
+        for (let i = 0; i < this.word.length; i++) {
+            if (palpite === this.word[i]) {
+                this.dashes.splice(i, 1, palpite);
+                foundLetter = true;
             }
         }
 
-        if (this.tracos.includes("_")) {
-            if (!achouLetra) {
-                if (this.guardaMembros.length < 6) {
-                    this.guardaMembros.push(this.membros[0]);
-                    this.membros.shift()
+        if (this.dashes.includes("_")) {
+            if (!foundLetter) {
+                if (this.lostParts.length < 6) {
+                    this.lostParts.push(this.parts[0]);
+                    this.parts.shift()
 
-                    if (this.guardaMembros.length === 6) {
-                        console.log(this.guardaMembros, "FIM DE JOGO!");
+                    if (this.lostParts.length === 6) {
+                        console.log(this.lostParts, "FIM DE JOGO!");
 
                         this.resetGame();
                     } else {
-                        console.log(this.guardaMembros);
+                        console.log(this.lostParts);
                     }
                 }
             } else {
-                console.log(this.tracos.join(" "));
+                console.log(this.dashes.join(" "));
             }
         } else {
-            console.log(this.tracos.join(" "));
+            console.log(this.dashes.join(" "));
             console.log(`PARABÉNS, VOCÊ GANHOU!`);
 
             this.resetGame();
         }
     },
     resetGame: function () {
-        this.tracos = "".padStart(this.palavra.length, "_").split("")
-        this.membros = ["🧑", "💪", "💪", "❤️", "🦵", "🦵"];
-        this.guardaMembros = [];
+        this.dashes = "".padStart(this.word.length, "_").split("")
+        this.parts = ["🧑", "💪", "💪", "❤️", "🦵", "🦵"];
+        this.lostParts = [];
     }
 }
 
 //GANHAR
-forca.verificarPalpite("a");
-forca.verificarPalpite("b");
-forca.verificarPalpite("h");
-forca.verificarPalpite("e");
-forca.verificarPalpite("o");
-forca.verificarPalpite("l");
-forca.verificarPalpite("l");
+hangman.checkGuess("a");
+hangman.checkGuess("b");
+hangman.checkGuess("h");
+hangman.checkGuess("e");
+hangman.checkGuess("o");
+hangman.checkGuess("l");
+hangman.checkGuess("l");
 
 //PERDER
-// forca.verificarPalpite("a");
-// forca.verificarPalpite("c");
-// forca.verificarPalpite("b");
-// forca.verificarPalpite("l");
-// forca.verificarPalpite("h");
-// forca.verificarPalpite("c");
-// forca.verificarPalpite("c");
-// forca.verificarPalpite("c");
-// forca.verificarPalpite("c");
-// forca.verificarPalpite("c");
-// forca.verificarPalpite("l");
+// hangman.checkGuess("a");
+// hangman.checkGuess("c");
+// hangman.checkGuess("b");
+// hangman.checkGuess("l");
+// hangman.checkGuess("h");
+// hangman.checkGuess("c");
+// hangman.checkGuess("c");
+// hangman.checkGuess("c");
+// hangman.checkGuess("c");
+// hangman.checkGuess("c");
+// hangman.checkGuess("l");
+// hangman.checkGuess("a");
