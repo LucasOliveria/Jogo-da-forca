@@ -14,7 +14,7 @@
 <h2 style="font-family: sans-serif;">Sobre o jogo da forca e funcionalidades do código:</h2>
 
 <p style="text-align: justify;">
-    O objetivo do Jogo da Forca em sí é fornecer uma palavra com n número de letras e o jogador deve tentar adivinhar por meio de palpites. Falando sobre o cógido, esse consiste em receber uma palavra qualquer, escondé-la e o usuário deve adivinhar qual a palavra a partir de palpites. Sendo cada palpite uma letra do alfabeto. 
+    O objetivo do Jogo da Forca é fornecer uma palavra com n número de letras e o jogador deve tentar adivinhar por meio de palpites. Falando sobre o cógido, esse consiste em receber uma palavra qualquer, escondé-la e o usuário deve adivinhar qual a palavra a partir de palpites. Sendo cada palpite uma letra do alfabeto. 
 </p>
 <p style="text-align: justify;">
     A cada palpite errado o programa imprime na tela uma parte do corpo do boneco, sendo 6, o número de palpites errados que o jogador pode jogar. O usuário vence se acertar todas as letras que compõem a palavra ou perde caso todas as 6 partes do boneco sejam impressas na tela antes dele conseguir advinhar a palavra.
