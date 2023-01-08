@@ -47,16 +47,18 @@ const hangman = {
     }
 }
 
-//GANHAR
+//WIN
 hangman.checkGuess("a");
 hangman.checkGuess("b");
 hangman.checkGuess("h");
 hangman.checkGuess("e");
 hangman.checkGuess("o");
+hangman.checkGuess("f");
+hangman.checkGuess("i");
 hangman.checkGuess("l");
 hangman.checkGuess("l");
 
-//PERDER
+//LOSE
 // hangman.checkGuess("a");
 // hangman.checkGuess("c");
 // hangman.checkGuess("b");
