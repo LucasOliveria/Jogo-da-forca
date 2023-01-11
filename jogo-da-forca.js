@@ -27,7 +27,7 @@ const hangman = {
 
                         this.resetGame();
                     } else {
-                        console.log(this.lostParts);
+                        console.log(this.dashes.join(" "), this.lostParts);
                     }
                 }
             } else {
