@@ -41,4 +41,4 @@
 
 <p>Lucas Oliveira</p>
 
-<a href="http://www.linkedin.com/in/lucas-de-oliveira-5b8a5532" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/lucas-oliveira-5b8a5532/" target="_blank">LinkedIn</a>
